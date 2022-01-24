@@ -205,7 +205,9 @@ Animal.create(name: "Salem", animalable: Cat.last)`
  `Animal Load (0.6ms)  SELECT  "animals".* FROM "animals" LIMIT ?  [["LIMIT", 11]]
 => #<ActiveRecord::Relation [#<Animal id: 1, name: "Tom", animalable_type: "Cat", animalable_id: 1, created_at: "2022-01-24 19:27:35", updated_at: "2022-01-24 19:27:35">, #<Animal id: 2, name: "Duffy", animalable_type: "Duck", animalable_id: 1, created_at: "2022-01-24 19:31:47", updated_at: "2022-01-24 19:31:47">, #<Animal id: 3, name: "Goofy", animalable_type: "Dog", animalable_id: 1, created_at: "2022-01-24 19:33:20", updated_at: "2022-01-24 19:33:20">, #<Animal id: 4, name: "Salem", animalable_type: "Cat", animalable_id: 2, created_at: "2022-01-24 19:34:03", updated_at: "2022-01-24 19:34:03">]>
 `
-Bonus:
+
+
+###Bonus:
 
 Para hacer más legibles los resultados de las consultas en la consola, podemos utilizar la gema pry.
 
