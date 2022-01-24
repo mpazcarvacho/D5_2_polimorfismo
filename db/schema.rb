@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_143439) do
+ActiveRecord::Schema.define(version: 2022_01_24_185620) do
 
   create_table "animals", force: :cascade do |t|
+    t.string "name"
     t.string "animalable_type"
     t.integer "animalable_id"
     t.datetime "created_at", null: false
@@ -21,25 +22,19 @@ ActiveRecord::Schema.define(version: 2022_01_24_143439) do
   end
 
   create_table "cats", force: :cascade do |t|
-    t.string "name"
+    t.string "fur"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "dogs", force: :cascade do |t|
-    t.string "name"
+    t.string "favourite_toy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "snakes", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tigers", force: :cascade do |t|
-    t.string "name"
+  create_table "ducks", force: :cascade do |t|
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

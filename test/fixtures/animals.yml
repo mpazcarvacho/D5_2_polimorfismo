@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyString
   animalable: one
   animalable_type: Animalable
 
 two:
+  name: MyString
   animalable: two
   animalable_type: Animalable
