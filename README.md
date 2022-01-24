@@ -205,9 +205,9 @@ Animal.create(name: "Salem", animalable: Cat.last)`
  `Animal Load (0.6ms)  SELECT  "animals".* FROM "animals" LIMIT ?  [["LIMIT", 11]]
 => #<ActiveRecord::Relation [#<Animal id: 1, name: "Tom", animalable_type: "Cat", animalable_id: 1, created_at: "2022-01-24 19:27:35", updated_at: "2022-01-24 19:27:35">, #<Animal id: 2, name: "Duffy", animalable_type: "Duck", animalable_id: 1, created_at: "2022-01-24 19:31:47", updated_at: "2022-01-24 19:31:47">, #<Animal id: 3, name: "Goofy", animalable_type: "Dog", animalable_id: 1, created_at: "2022-01-24 19:33:20", updated_at: "2022-01-24 19:33:20">, #<Animal id: 4, name: "Salem", animalable_type: "Cat", animalable_id: 2, created_at: "2022-01-24 19:34:03", updated_at: "2022-01-24 19:34:03">]>
 `
+Y podemos comprobar que cada registro en la tabla animal, aparte de tener un nombre, tiene un id que hace referencia al id en la tabla indicada en la columna animalable_type.
 
-
-###Bonus:
+### Bonus:
 
 Para hacer más legibles los resultados de las consultas en la consola, podemos utilizar la gema pry.
 
@@ -217,38 +217,10 @@ Para hacer más legibles los resultados de las consultas en la consola, podemos 
 4. Escribir `$ pry` en la consola, lo que nos dirigirá a la consola de pry.
 5. Al realizar la consulta Animal.all, obtendremos lo siguiente:
 
-`
-  Animal Load (0.5ms)  SELECT "animals".* FROM "animals"
-=> [#<Animal:0x00007fca94424a30
-  id: 1,
-  name: "Tom",
-  animalable_type: "Cat",
-  animalable_id: 1,
-  created_at: Mon, 24 Jan 2022 19:27:35 UTC +00:00,
-  updated_at: Mon, 24 Jan 2022 19:27:35 UTC +00:00>,
- #<Animal:0x00007fca944247d8
-  id: 2,
-  name: "Duffy",
-  animalable_type: "Duck",
-  animalable_id: 1,
-  created_at: Mon, 24 Jan 2022 19:31:47 UTC +00:00,
-  updated_at: Mon, 24 Jan 2022 19:31:47 UTC +00:00>,
- #<Animal:0x00007fca94424170
-  id: 3,
-  name: "Goofy",
-  animalable_type: "Dog",
-  animalable_id: 1,
-  created_at: Mon, 24 Jan 2022 19:33:20 UTC +00:00,
-  updated_at: Mon, 24 Jan 2022 19:33:20 UTC +00:00>,
- #<Animal:0x00007fca9442ee90
-  id: 4,
-  name: "Salem",
-  animalable_type: "Cat",
-  animalable_id: 2,
-  created_at: Mon, 24 Jan 2022 19:34:03 UTC +00:00,
-  updated_at: Mon, 24 Jan 2022 19:34:03 UTC +00:00>]
-`
+![pry](https://user-images.githubusercontent.com/32393966/150853847-167ae2a4-fa67-4b9a-8d4c-911fe1e9c8d4.png)
+
+
 
 Fin.
 
-Documento creado por María Paz Carvacho.
+***Documento creado por María Paz Carvacho.***
